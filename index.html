@@ -1,0 +1,654 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://jigsaw.btxmedia.com/assets/css/main.css">
+        <link href="https://jigsaw.btxmedia.com/pws/client/ux-style-guide/video-modal/lity.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://jigsaw.btxmedia.com/pws/client/ux-style-guide/video-modal/jquery.js"></script>
+        <script src="https://jigsaw.btxmedia.com/pws/client/ux-style-guide/video-modal/lity.js"></script>
+    </head>
+
+<style type="text/css">
+    /*Custom width*/
+    
+    .grid-container.custom-width {
+        max-width: 100%;
+        padding: 0 15%;
+    }
+    .content > .content-wrap {
+        padding: 0;
+        
+    }
+    /*@media screen and (min-width: 2559px) {
+        .grid-container.custom-width {
+            max-width: 100%;
+            padding: 0 15%!important;
+        }
+    }*/
+    .content > .content-wrap {
+        padding: 0;
+    }
+    .content > .content-wrap > .grid-container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .content > .content-wrap > .grid-container > .grid-default {
+        padding: 0;
+    }
+    @media screen and (max-width: 1024px) {
+        .grid-container.custom-width {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .grid-container.custom-width {
+            max-width: 100%;
+            padding: 0;
+        }
+        .content > .content-wrap {
+            padding: 0;
+        }
+        .content > .content-wrap > .grid-container {
+            max-width: 100%;
+            padding: 0;
+        }
+        .content > .content-wrap > .grid-container > .grid-default {
+            padding: 0;
+        }
+    }
+    /*End Custom width*/
+    /*UX Container Var1*/
+    
+    .ux-container-var1 {
+        display: block;
+        margin: 5.5rem 0;
+    }
+    /*UX Text Variation 1 */
+    
+    .ux-body-var1 p {
+        font-family: 'FuturaPTMedium-Reg', sans-serif;
+    }
+    .ux-centred-txt-var1 {
+        text-align: center;
+        display: block;
+    }
+    .ux-centred-txt-var1 h2 {
+        margin: 0;
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+        font-family: 'FuturaPTBook-Reg', Arial, Verdana, sans-serif;
+        text-transform: none;
+    }
+    .ux-centred-txt-var1 p {
+        margin: 0;
+        padding: 3.5rem 0;
+        font-family: 'FuturaPTMedium-Reg', sans-serif;
+    }
+    /*UX Text and Buttons Variation 2 */
+    
+    .ux-centred-txt-var2 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .ux-centred-txt-var2 p {
+        margin: 0;
+        padding: 3rem 0;
+        font-family: 'FuturaPTMedium-Reg', sans-serif;
+    }
+    /*Middle section*/
+    
+    .ux-middle-spacing {
+        padding-top: 5%;
+        padding-bottom: 2.5%;
+    }
+    /*UX P: Body font*/
+    
+    @media screen and (min-width: 1441px) {
+        .ux-body-var1 p {
+            font-size: 1.9rem;
+            line-height: 2.5rem;
+        }
+    }
+    .ux-body-center {
+        text-align: center;
+        padding: 0% 5%;
+    }
+    /*UX VIDEO 1*/
+    
+    video {
+        width: 100%;
+        display: block;
+        height: auto;
+        z-index: -100;
+        background-size: cover;
+    }
+    /*****************************/
+    
+    .overlay {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        left: 0px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .overlay h1 {
+        text-align: center;
+        padding-top: 100px;
+        color: #fff;
+        font-family: inherit;
+        z-index: 100;
+    }
+    .img-pad {
+        padding: 0 2.5%;
+    }
+    @media screen and (max-width: 768px) {
+        .img-no-pad-left {
+            padding-left: 0;
+        }
+        .img-no-pad-right {
+            padding-right: 0;
+        }
+    }
+    .img-top {
+        padding-bottom: 5%;
+    }
+    .img-bottom {
+        padding-top: 5%;
+    }
+    .col-12.full-width-tablet {
+        padding: 0;
+    }
+    .ux-main-container {
+        padding: 2% 0;
+        background: #f8f7ee;
+    }
+    .divider {
+        width: 15rem;
+        border-bottom: 1px solid #000;
+        padding-bottom: 1%;
+        margin: 2% auto;
+    }
+    .play-icon {
+        width: 10%;
+        margin: auto;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        right: 0;
+        display: block;
+    }
+    
+    
+    @media screen and (min-width: 1200px) {
+        .ux-centred-txt-var1 h2 {
+            font-size: 3rem;
+            line-height: 3.7rem;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .ux-centred-txt-var1 h2 {
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+        }
+        .ux-centred-txt-var1 p {
+            padding: 3.4rem 5%;
+        }
+    }
+    @media screen and (min-width: 1920px) {
+        .ux-body-var1 p,
+        .ux-centred-txt-var1 p {
+            font-size: 3rem;
+            line-height: 3.7rem;
+        }
+        .ux-centred-txt-var1 h2 {
+            font-size: 3.8rem;
+            line-height: 4.2rem;
+        }
+        .ux-body-center {
+            padding: 0% 2.5%;
+        }
+    }
+    @media screen and (min-width: 769px) {
+        .hidden-lg {
+            display: none!important;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .hidden-md {
+            display: none;
+        }
+        .visible-md {
+            display: block;
+        }
+        .ux-body-center {
+            padding: 0 2%;
+            margin-top: 0;
+        }
+        .cta-center {
+            text-align: center;
+            margin-top: 2.5%;
+        }
+        .ux-centred-txt-var1 p {
+            padding: 3.5rem 4.5%
+        }
+        .ux-container-var1 {
+            margin: 2.5% 0;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .hidden-xs {
+            display: none!important;
+        }
+        .visible-xs {
+            display: block;
+        }
+        .img-no-pad-left {
+            padding-left: 2.5%;
+        }
+        .img-no-pad-right {
+            padding-right: 2.5%;
+        }
+        .img-bottom {
+            padding-top: 0;
+        }
+        .img-top {
+            padding-bottom: 0;
+        }
+        .ux-container-var1 {
+            margin: 2.5rem 0;
+        }
+        span.line-break-mob {
+            display: block;
+        }
+        .ux-centred-txt-var1 h2 {
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+        }
+        .ux-body-var1 p,
+        .ux-centred-txt-var1 p {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+        .img-mob-top {
+            padding-top: 5%;
+        }
+        .ux-centred-txt-var1 h2 {
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+        }
+        .divider {
+            margin: 6% auto;
+        }
+        
+        .img-space-1 {
+            padding-top: 13px!important;
+        }
+        .img-space-2 {
+            padding-top: 4px!important;
+        }
+        video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+    }
+    /**/
+    /*Vimeo embed*/
+    
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /*Modal*/
+    /*==================================== 
+  Our Modal Window styles
+  =====================================*/
+    
+    .modal {
+        background: #fff;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        display: inline-block;
+        padding: 1em;
+    }
+    @media (min-width: 43.75em) {
+        .modal {
+            padding: 1.5em;
+        }
+    }
+    .modal > label {
+        background: #FFD300;
+        border: 1px solid #f0c600;
+        border-radius: .2em;
+        color: #000000;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: bold;
+        padding: 0.75em 1.5em;
+        text-shadow: 1px 1px 1px #fff;
+        -webkit-transition: all 0.55s;
+        transition: all 0.55s;
+    }
+    .modal > label:hover {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
+    .modal__overlay {
+        background: rgba(25, 25, 25, .5);
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        text-align: center;
+        text-shadow: none;
+        top: 0;
+        z-index: 600;
+    }
+    .modal__wrap {
+        padding: 1em 0;
+        position: relative;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 90%;
+    }
+    @media (min-width: 50em) {
+        .modal__wrap {
+            padding: 1.75em;
+        }
+    }
+    @media (min-height: 37.5em) {
+        .modal__wrap {
+            position: relative;
+        }
+    }
+    .modal__wrap label {
+        background: #fff;
+        border-radius: 50%;
+        color: #000000;
+        cursor: pointer;
+        display: inline-block;
+        height: 3.5rem;
+        line-height: 2.3;
+        width: 3.5rem;
+        margin: 1.5rem 0;
+        z-index: 100;
+    }
+    .modal__wrap h2 {
+        color: #FFD300;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+    }
+    .modal__wrap p {
+        color: #FFD300;
+        text-align: justify;
+    }
+    .modal input:focus ~ label {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
+    .modal input {
+        position: absolute;
+        top: -1000px;
+    }
+    .modal__overlay {
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: -100;
+    }
+    input:checked ~ .modal__overlay {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        z-index: 800;
+    }
+    /*UX Button*/
+    
+    span.ux-button {
+        display: inline-block;
+        border: #0f0f0f 0.2rem solid;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        color: #000000;
+        font-family: 'FuturaPTMedium-Reg', Arial, Verdana, sans-serif;
+        padding: 1.0rem 4.5rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        width: auto;
+        text-align: center;
+    }
+    @media screen and (min-width: 1920px) {
+        span.ux-button {
+            font-size: 2.0rem;
+            padding: 1.3rem 3rem;
+            letter-spacing: 0.4rem;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        a.cta {
+            display: block;
+            margin: 0 -2%;
+        }
+        span.ux-button {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            padding: 1.4rem 0;
+            margin-top: 0;
+            width: 90%;
+        }
+    }
+    @media screen and (min-width: 1920px) {
+        span.ux-button {
+            font-size: 2.1rem;
+            line-height: 2.1rem;
+            min-width: 34rem;
+            padding: 2.0rem 4.5rem;
+        }
+    }
+    /*END UX BUTTON*/
+</style>
+
+<div class="ux-main-container">
+
+    <!-- Hero - SECTION 1 -->
+    <div class="grid-row">
+        <div class="grid-container custom-width">
+            <div class="col-6 img-pad">
+
+                <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/1578x2366-audrey-min.jpg" class="img-responsive hidden-xs">
+
+                <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-top-img-2-dtp.jpg" class="img-responsive hidden-lg hidden-md visible-xs">
+
+            </div>
+            <div class="col-6 img-pad">
+
+                <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-top-img-2-dtp.jpg" class="img-responsive hidden-xs">
+
+                <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/1578x2366-audrey-min.jpg" class="img-responsive hidden-lg hidden-md visible-xs img-space-1">
+
+            </div>
+        </div>
+    </div>
+    <!-- End Hero - SECTION 1 -->
+
+    <!-- Video - SECTION 2 -->
+    <section class="ux-container-var1">
+        <div class="grid-row">
+            <div class="grid-container custom-width">
+                <div class="col-6 ux-body-var1 ux-body-center">
+                    <p class="hidden-md visible-xs">Our love for design and craftsmanship lead us to a chance encounter, resulting in a collaboration with New York artist Audrey Louise Reynolds to create a collection bursting with exclusive prints. Made up of three chapters differentiating in techniques, this range is symbolic of nature’s beauty: the unpredictable effects of natural ingredients showered by rain onto lavish fabrics. Discover maxi and kimono dresses, camisoles, jumpers and more, all with one thing in common: Audrey’s unique formula….</p>
+
+                    <p class="hidden-lg visible-md hidden-xs">Our love for design and craftsmanship lead us to a chance encounter, resulting in a collaboration with New York artist Audrey Louise Reynolds to create a collection bursting with exclusive prints. Made up of three chapters differentiating in techniques, this range is symbolic of nature’s beauty: the unpredictable effects of natural ingredients showered by rain onto lavish fabrics. Discover Audrey’s unique formula….</p>
+
+                    <p class="hidden-md visible-xs">
+                        <a class="cta" href="https://www.jigsaw-online.com/category/womens/audrey-louise-reynolds">
+                            <span class="ux-button">Shop the collection</span>
+                        </a>
+                    </p>
+
+                </div>
+
+                <div class="col-6 img-pad">
+                    <div class="video-placeholder">
+                        <div style="position:relative;">
+                          
+                            <video autoplay='true' loop='true' muted='true'>
+                                <source src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-short-clip.mp4" type="video/mp4" />
+                                <source src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-short-clip.webm" type="video/webm" />
+                                <source src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-short-clip.ogv" type="video/ogg" />
+                            </video>
+                            
+                           
+                            <div class="overlay">
+                                <a style="font-size:20px;" href="https://vimeo.com/162392305" data-lity>
+                                    <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/video-icon.png" class="img-responsive play-icon"> </a>
+                            </div>
+                          </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 visible-md hidden-lg hidden-xs cta-center">
+                    <p>
+                        <a class="cta" href="https://www.jigsaw-online.com/category/womens/audrey-louise-reynolds">
+                            <span class="ux-button">Shop the collection</span>
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Video - SECTION 2 -->
+
+    <!-- Chapter One: Limited Edition -->
+    <div class="grid-row">
+        <div class="grid-container custom-width">
+            <div class="ux-centred-txt-var1 ux-body-var1">
+                <h2>Chapter One:<span class="line-break-mob"> Limited Edition</span></h2>
+                <p>For this story, Audrey has captured single moment in time, using rain to imprint pale pink crystals blended with wild flowers, weeping willow bark with hibiscus, and mulberries with blue algae. A 50-piece limited edition collection, the hand-dyed prints feature on the finest silks cut to form fluid drapes, alongside casual designs made from the softest cotton and cashmere. No two pieces are alike, bringing exclusivity to your wardrobe.
+                </p>
+            </div>
+
+            <!-- Left -->
+            <div class="col-6 img-pad img-no-pad-left">
+                <div class="col-12 full-width-tablet">
+                    <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/1590x2219-limited-edition-min.jpg" class="img-responsive img-top">
+                </div>
+                <div class="grid-row">
+                    <div class="col-7 offset-5">
+                        <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/977x1415-limited-edition-04-min.jpg" class="img-responsive img-bottom hidden-xs">
+                        <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-mobile_v2_06.jpg" class="img-responsive img-bottom hidden-lg hidden-md visible-xs img-space-1">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right -->
+            <div class="col-6 img-pad img-no-pad-right">
+                <div class="col-7">
+                    <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/977x1415-limited-edition-min.jpg" class="img-responsive img-top hidden-xs">
+
+                    <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-mobile_v2_08.jpg" class="img-responsive img-top hidden-lg hidden-md visible-xs img-space-2">
+                </div>
+                <div class="grid-row">
+                    <div class="col-12 full-width-tablet">
+                        <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/1590x2219-limited-edition2-min.jpg" class="img-responsive img-bottom img-space-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Chapter One: Limited Edition -->
+
+    <!-- Chapter Two: A Digital Focus -->
+    <div class="grid-row">
+        <div class="grid-container custom-width">
+            <div class="ux-centred-txt-var1 ux-body-var1 ux-middle-spacing">
+                <h2>Chapter Two: <span class="line-break-mob">A Digital Focus</span></h2>
+                <p>By using the same process with different ingredients, including wild blackberries, dandelion, plantain roots and pumpkin, we have remastered Audrey’s multi-coloured masterpiece by digitally printing the exclusive artwork onto metres of beautiful silk.  Silhouettes are modern, taking a relaxed approach with a feminine touch.
+                </p>
+            </div>
+
+            <!-- Left -->
+            <div class="col-6 img-pad img-no-pad-left">
+                <div class="offset-5 col-7">
+                    <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/977x1415-digital-min.jpg" class="img-responsive img-top hidden-xs">
+                    <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-mobile_v2_10.jpg" class="img-responsive img-top hidden-lg hidden-md visible-xs">
+                </div>
+                <div class="grid-row">
+                    <div class="col-12 full-width-tablet">
+                        <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/1590x2219-digital2-min.jpg" class="img-responsive img-bottom hidden-xs img-space-2">
+                        <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/1590x2219-digital-min.jpg" class="img-responsive img-bottom hidden-lg hidden-md visible-xs img-space-1">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Right -->
+            <div class="col-6 img-pad img-no-pad-right">
+                <div class="col-12 full-width-tablet">
+                    <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/1590x2219-digital-min.jpg" class="img-responsive img-top hidden-xs">
+                    <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/1590x2219-digital2-min.jpg" class="img-responsive img-top hidden-lg hidden-md visible-xs">
+                </div>
+                <div class="grid-row">
+                    <div class="col-7 ">
+                        <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/977x1415-digital2-min.jpg" class="img-responsive img-bottom hidden-xs">
+                        <img src="https://jigsaw.btxmedia.com/pws/client/images/content/audrey/ALR-mobile_v2_17.jpg" class="img-responsive img-bottom hidden-lg hidden-md visible-xs img-space-1">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Chapter Two: A Digital Focus -->
+
+    <!-- Bottom Section -->
+
+    <div class="grid-row">
+        <div class="grid-container custom-width">
+            <div class="ux-centred-txt-var2 ux-body-var1 ux-centred-txt-var1">
+                <a class="cta" href="/category/womens/audrey-louise-reynolds">
+                    <span class="ux-button">Shop The Collection</span>
+                </a>
+
+                <p>Read our interview with Audrey as she reveals the challenges behind the print.</p>
+
+                <a class="cta" href="https://www.jigsaw-online.com/blog/home/audrey-louise-reynolds.html">
+                    <span class="ux-button">Read the blog</span>
+                </a>
+                <div class="divider">&nbsp;</div>
+                <h2>Chapter Three: <span class="line-break-mob">Coming Soon</span></h2>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Bottom Section -->
+</div>
+
+    </body>
+</html>
